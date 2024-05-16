@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Navigation</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <!-- Demonstration of DOM Navigation Methods -->
+    <h1>DOM Navigation Methods</h1>
+
+    <h2>1. Query Selctor</h2>
+    <div class="card" onclick="changeColor()">
+      <div class="card-header"><h2>Card 1</h2></div>
+      <div class="card-body">
+        <p>Click this card to change it's color</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="changeColor()">
+      <div class="card-header"><h2>Card 2</h2></div>
+      <div class="card-body">
+        <p>Click this card to change it's color</p>
+      </div>
+    </div>
+    <h2>2. getElementById()</h2>
+    <input type="text" id="text" placeholder="Input Some text" />
+    <p>All caps Input:</p>
+    <p id="text-result"></p>
+
+    <script>
+      function changeColor() {
+        // Get the card element
+        const colors = ["red", "green", "blue", "yellow", "purple"];
+        const card = document.querySelector(".card");
+
+        // Change the background color of the card
+        card.style.backgroundColor =
+          colors[Math.floor(Math.random() * colors.length)];
+      }
+
+      // Add an event listener to the input element
+      const input = document.getElementById("text");
+      input.addEventListener("input", function () {
+        // Get the input value
+        const value = input.value;
+
+        // Convert the input value to uppercase
+        const result = value.toUpperCase();
+
+        // Display the result in the paragraph element
+        document.getElementById("text-result").innerHTML = result;
+      });
+    </script>
+  </body>
+</html>
