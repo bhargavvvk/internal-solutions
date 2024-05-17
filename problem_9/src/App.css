@@ -1,0 +1,90 @@
+.taskbar {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  height: auto;
+  bottom: 0;
+  width: 30%;
+  margin: auto;
+  margin-top: 5cm;
+  border-radius: 10px;
+}
+
+.taskbar-header {
+  display: flex;
+  justify-content: space-around;
+}
+
+.taskbar-header input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin: 10px;
+  background-color: #171717;
+  color: white;
+}
+
+::placeholder {
+  color: white;
+}
+
+.taskbar-header button {
+  background-color: #171717;
+  color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: px;
+  width: 50%;
+  background-color: #171717;
+  color: white;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.task button {
+  background-color: #171717;
+  color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.task button:hover {
+  background-color: #333;
+}
+
+.task input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin: 10px;
+  background-color: #171717;
+  color: white;
+}
+
+.task input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+.green {
+  background-color: green;
+}
+
+.green input {
+  background-color: white;
+  color: black;
+}
