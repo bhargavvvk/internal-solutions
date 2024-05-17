@@ -1,0 +1,43 @@
+.card {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: beige;
+  color: black;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.card-header {
+  padding: 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-footer {
+  padding: 20px;
+  border-top: 1px solid #f0f0f0;
+  text-decoration: none;
+  background-color: rgb(195, 195, 175);
+}
+
+.card-footer:hover {
+  background-color: #605f5f;
+  color: white;
+}
+
+.card-footer:active {
+  background-color: #2e2e2e;
+}
+
+.card-footer:visited {
+  color: #333;
+}
