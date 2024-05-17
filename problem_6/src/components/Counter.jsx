@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from "react";
 function Counter(props) {
   const [count, setCount] = useState(0);
-
+  const [time, setTime] = useState(new Date().toLocaleTimeString());
   // Simulates fetching data on mount (componentDidMount)
   useEffect(() => {
     console.log("Component mounted (useEffect)");
+
     const fetchData = async () => {
       fetch("http://worldtimeapi.org/api/timezone/Asia/Kolkata", {
         method: "GET",
       })
         .then((response) => response.json())
         .then((data) => {
-          console.log(data);
+          setTime(data.datetime);
         })
         .catch((error) => {
           console.error("Error:", error);
@@ -19,6 +20,7 @@ function Counter(props) {
       await new Promise((resolve) => setTimeout(resolve, 1000));
       console.log("Data fetched");
     };
+
     fetchData();
   }, []); // Empty dependency array: runs only once on mount
 
@@ -37,6 +39,8 @@ function Counter(props) {
 
   return (
     <div>
+      <h1>Time is {time}</h1>
+      <h1>Counter</h1>
       <p>You clicked {count} times</p>
       <button onClick={increment}>Click me</button>
     </div>
