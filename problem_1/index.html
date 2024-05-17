@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="logo.png" alt="" style="width: 30%" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          aria-hidden="true"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse d-flex flex-row-reverse"
+          id="navbarNavDropdown"
+        >
+          <ul class="navbar-nav fs-7">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#imageSlideshow">SlideShow</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#boxes">Boxes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#text-box">Text</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="imageSlideshow" class="carousel slide" data-bs-ride="carousel">
+      <ol class="carousel-indicators">
+        <li
+          data-bs-target="#imageSlideshow"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="First slide"
+        ></li>
+        <li
+          data-bs-target="#imageSlideshow"
+          data-bs-slide-to="1"
+          aria-label="Second slide"
+        ></li>
+        <li
+          data-bs-target="#imageSlideshow"
+          data-bs-slide-to="2"
+          aria-label="Third slide"
+        ></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active" data-bs-interval="1000">
+          <img src="img-1.jpg" class="w-100 d-block" alt="First slide" />
+        </div>
+        <div class="carousel-item" data-bs-interval="1000">
+          <img src="img-2.jpg" class="w-100 d-block" alt="Second slide" />
+        </div>
+        <div class="carousel-item" data-bs-interval="1000">
+          <img src="img-3.jpg" class="w-100 d-block" alt="Third slide" />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#imageSlideshow"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#imageSlideshow"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <div class="container-fluid mt-5" id="text-box">
+      <div class="row">
+        <div class="col-8 col-xl-8 col-sm-12">
+          <h1 class="text-center">Welcome to My Website Traveller</h1>
+          <p class="text-center">
+            We're absolutely delighted to see you here on our website! It's not
+            just a website, but a space that was crafted with great care and
+            attention to detail, specifically for visitors like you. We're
+            thrilled to have the opportunity to share it with you. Our website
+            is a reflection of our passion and dedication to providing valuable
+            content and resources to our visitors. We've worked hard to create a
+            user-friendly and engaging experience that we hope you'll enjoy.
+            Thank you for taking the time to visit us. We're honored to have you
+            here and hope that you find our website informative, inspiring, and
+            helpful. We're always striving to improve and would love to hear any
+            feedback or suggestions you may have. Once again, welcome to our
+            website! We hope you have a wonderful experience here and look
+            forward to your next visit. Warm regards, The Website Owner
+          </p>
+        </div>
+        <div class="col-4">
+          <img class="w-75 col-xl-4 col-sm-12" src="img-1.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="boxes">
+      <div class="row">
+        <div class="col-3">
+          <div class="card m-5" style="width: 18rem">
+            <img
+              src="https://picsum.photos/100/100"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card m-5" style="width: 18rem">
+            <img
+              src="https://picsum.photos/100/100"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card m-5" style="width: 18rem">
+            <img
+              src="https://picsum.photos/100/100"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-3">
+          <div class="card m-5" style="width: 18rem">
+            <img
+              src="https://picsum.photos/100/100"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-3">
+          <div class="card m-5 card-box" style="width: 18rem">
+            <img
+              src="https://picsum.photos/100/100"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card m-5 card-box" style="width: 18rem">
+            <img
+              src="https://picsum.photos/100/100"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card m-5 card-box" style="width: 18rem">
+            <img
+              src="https://picsum.photos/100/100"
+              class="card-img-top"
+              alt="..."
+              width="100px"
+              height="100px"
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-3">
+          <div class="card m-5 card-box" style="width: 18rem">
+            <img
+              src="https://picsum.photos/100/100"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
