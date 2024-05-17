@@ -4,7 +4,7 @@ function Counter(props) {
   const [time, setTime] = useState(new Date().toLocaleTimeString());
   // Simulates fetching data on mount (componentDidMount)
   useEffect(() => {
-    console.log("Component mounted (useEffect)");
+    console.log("Component mounted (useEffect 1)");
 
     const fetchData = async () => {
       fetch("http://worldtimeapi.org/api/timezone/Asia/Kolkata", {

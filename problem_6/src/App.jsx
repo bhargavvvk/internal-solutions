@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <h1>Hello World</h1>
       <Counter key={1} index={1}></Counter>
-      <Counter key={2} index={2}></Counter>
+      {/* <Counter key={2} index={2}></Counter> */}
     </div>
   );
 }
