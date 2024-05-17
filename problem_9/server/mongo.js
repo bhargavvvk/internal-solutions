@@ -13,7 +13,7 @@ mongoose
   });
 
 const taskSchema = new mongoose.Schema({
-  name: String,
+  title: String,
   completed: Boolean,
 });
 

@@ -10,7 +10,7 @@ app.use(express.json());
 
 app.post("/api/addTask", async (req, res) => {
   const task = new Task({
-    name: req.body.name,
+    title: req.body.title,
     completed: false,
   });
 
@@ -25,15 +25,19 @@ app.get("/api/getTasks", async (req, res) => {
 
 app.put("/api/updateTask", async (req, res) => {
   const task = await Task.findById(req.body.id);
-  task.completed = !task.completed;
+  console.log(task.title, req.body.title, req.body.completed);
+  const title = req.body.title;
+  const completed = req.body.completed;
+  task.completed = completed;
+  task.title = title;
   await task.save();
   res.send(task);
 });
 
 app.delete("/api/deleteTask", async (req, res) => {
-  const task = await Task.findById(req.body.id);
-  await task.delete();
-  res.send(task);
+  const id = await Task.findById(req.body.id);
+  await Task.deleteOne({ _id: id });
+  res.send("Deleted");
 });
 
 app.listen(port, () => {

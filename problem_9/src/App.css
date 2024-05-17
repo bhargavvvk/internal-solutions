@@ -1,3 +1,9 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
 .taskbar {
   display: flex;
   justify-content: space-between;
