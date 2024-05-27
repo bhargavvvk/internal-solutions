@@ -1,26 +1,63 @@
-import { useEffect } from "react";
-import "./App.css";
-import Counter from "./components/Counter";
-function App() {
-  useEffect(() => {}, []);
-  return (
-    <div className="App">
-      <h1>Hello World</h1>
-      <Counter key={1} index={1}></Counter>
-      {/* <Counter key={2} index={2}></Counter> */}
-    </div>
-  );
+import React, { Component } from "react";
+
+class AnotherComponent extends Component {
+  componentWillUnmount() {
+    console.log("Another Component Will Unmount");
+  }
+  render() {
+    return (
+      <div>
+        <h2>This is Another Component</h2>
+      </div>
+    );
+  }
 }
 
-export default App;
+class LifecycleExample extends Component {
+  constructor(props) {
+    super(props);
+    console.log("Constructor");
+    this.state = {
+      counter: 0,
+      showAnotherComponent: false,
+    };
+  }
 
-// fetch("http://worldtimeapi.org/api/timezone/Asia/Kolkata", {
-//       method: "GET",
-//     })
-//       .then((response) => response.json())
-//       .then((data) => {
-//         console.log(data);
-//       })
-//       .catch((error) => {
-//         console.error("Error:", error);
-//       });
+  componentDidMount() {
+    console.log("Component Did Mount");
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    console.log("Component Did Update");
+  }
+
+  handleClick = () => {
+    this.setState((prevState) => ({
+      counter: prevState.counter + 1,
+    }));
+  };
+
+  toggleAnotherComponent = () => {
+    this.setState((prevState) => ({
+      showAnotherComponent: !prevState.showAnotherComponent,
+    }));
+  };
+
+  render() {
+    console.log("Render");
+    return (
+      <div>
+        <h1>Lifecycle Example</h1>
+        <p>Counter: {this.state.counter}</p>
+        <button onClick={this.handleClick}>Increment Counter</button>
+        <br />
+        <button onClick={this.toggleAnotherComponent}>
+          {this.state.showAnotherComponent ? "Hide" : "Show"} Another Component
+        </button>
+        {this.state.showAnotherComponent && <AnotherComponent />}
+      </div>
+    );
+  }
+}
+
+export default LifecycleExample;
