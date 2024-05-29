@@ -1,7 +1,36 @@
 import { useState } from "react";
 import "./App.css";
-
+import "./NavBar.css";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Button from 'react-bootstrap/Button'
 function App() {
+  
+
+  return (
+    <BrowserRouter>
+    <NavBar />
+    <Routes>
+        <Route path="/" element={<Form />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+const NavBar = () => {
+  return (
+<>
+<nav>
+    <a href="/">Home</a>
+    <a href="/about">About Us</a>
+    <a href="/contact">Contact Us</a>
+</nav>
+</>
+  )
+}
+
+function Form() {
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
   const [email, setEmail] = useState("");
@@ -9,7 +38,7 @@ function App() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [gender, setGender] = useState("");
-  const [course, setCourse] = useState("");
+  const [course, setCourse] = useState("cse");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -33,10 +62,8 @@ function App() {
       console.log(response);
     });
   };
-
   return (
-    <>
-      <div className="container center-form">
+    <div className="container center-form">
         <form action="" method="get" onSubmit={(e) => handleSubmit(e)}>
           <h1>Student Registration Form</h1>
           <p>Fill in this form to register</p>
@@ -141,10 +168,25 @@ function App() {
           </select>
           <br />
 
-          <button type="submit">Register</button>
+          <Button type="submit">Register</Button>
         </form>
       </div>
-    </>
+  )
+}
+
+function About() {
+  return (
+    <div>
+      <h1>Learn More About Us</h1>
+    </div>
+  );
+}
+
+function Contact() {
+  return (
+    <div>
+      <h1>Get in Touch</h1>
+    </div>
   );
 }
 

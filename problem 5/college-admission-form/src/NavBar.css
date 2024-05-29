@@ -1,0 +1,16 @@
+nav{
+    background-color: rgb(241, 171, 39);
+    color: white;
+    padding:22px;
+}
+
+nav a{
+    padding: 10px;
+    margin: 10px;
+    text-decoration: none;
+}
+
+nav a:visited {
+    color : white;
+    text-decoration: none;
+}
